@@ -1,2 +1,6 @@
 remove_corrupted_images:
-  none: none
+  None: None
+
+remove_dark_and_bright_images:
+  dark_image_threshold: 20
+  bright_image_threshold: 200
