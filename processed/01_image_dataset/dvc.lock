@@ -34,3 +34,34 @@ stages:
       md5: 86c58a80cf1de17566d7b21d42f8361e.dir
       size: 2585235
       nfiles: 20
+  classify_day_night_and_foggy_images:
+    cmd: python src/classify_day_night_and_foggy_images.py data/intermediate/remove_dark_and_bright_images
+    deps:
+    - path: data/intermediate/remove_dark_and_bright_images
+      md5: 86c58a80cf1de17566d7b21d42f8361e.dir
+      size: 2585235
+      nfiles: 20
+    - path: src/classify_day_night_and_foggy_images.py
+      md5: b52d5dc165736f37c09e9a62ce6b4150
+      size: 4298
+    params:
+      params.yaml:
+        classify_day_night_and_foggy_images.day_night_image_threshold: 100
+        classify_day_night_and_foggy_images.fog_image_threshold: 500
+    outs:
+    - path: data/outputs/day_images/foggy
+      md5: f1e43cbf5cb2a38a93cd7a7c28e895a9.dir
+      size: 189269
+      nfiles: 3
+    - path: data/outputs/day_images/sharp
+      md5: a8a0cbb4b59db5391547dd52dcf6eb41.dir
+      size: 1828249
+      nfiles: 10
+    - path: data/outputs/night_images/foggy
+      md5: 35a82816909294ef63964147a7d5510b.dir
+      size: 9509
+      nfiles: 1
+    - path: data/outputs/night_images/sharp
+      md5: 559c0d334d4ad773d2e6ee962ebf19bb.dir
+      size: 558208
+      nfiles: 6
