@@ -17,3 +17,20 @@ SSH, S3, GCS, etc. as a data store.
 ```bash
 poetry run dvc remote add -d storage /Users/marco/Documents/image_data_registry_dvc_storage
 ```
+
+## Add a new raw dataset
+
+```bash
+poetry run dvc add raw/01_data_collection_16_oct_2021
+```
+
+Add the dataset to git 
+
+```bash
+git add raw/01_data_collection_16_oct_2021.dvc raw/.gitignore
+```
+
+Push the new dataset to the remote storage
+```bash
+poetry run dvc push
+```
