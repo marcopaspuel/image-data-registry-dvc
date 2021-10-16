@@ -37,7 +37,7 @@ def remove_corrupted_images(input_dir, output_dir):
     :return:
     """
     ensure_dir(output_dir)
-    for input_file in Path(input_dir).glob('*'):
+    for input_file in Path(input_dir).glob('**/*'):
         try:
             img = Image.open(input_file)  # open the image file
             img.verify()  # verify that it is, in fact an image
@@ -51,4 +51,5 @@ def remove_corrupted_images(input_dir, output_dir):
             print('Bad file:', input_file.name)  # Print out the names of corrupt files
 
 
-remove_corrupted_images(input_dir, output_dir)
+if __name__ == '__main__':
+    remove_corrupted_images(input_dir, output_dir)
