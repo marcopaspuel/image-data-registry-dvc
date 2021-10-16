@@ -34,3 +34,18 @@ Push the new dataset to the remote storage
 ```bash
 poetry run dvc push
 ```
+
+## Create a new image dataset from raw data
+
+Import the raw image data into the input folder
+```bash
+poetry run dvc import https://github.com/marcopaspuel/image-data-registry-dvc \
+                      raw/01_data_collection_16_oct_2021 \
+                      -o processed/01_image_dataset/data/inputs
+```
+
+To track the changes with git, run: 
+```bash
+git add processed/01_image_dataset/data/inputs/01_data_collection_16_oct_2021.dvc \
+        processed/01_image_dataset/data/inputs/.gitignore
+```
