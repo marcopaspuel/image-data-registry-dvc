@@ -15,3 +15,22 @@ stages:
       md5: db86341a50c18dfe57815f2b0fcf26fe.dir
       size: 2770263
       nfiles: 25
+  remove_dark_and_bright_images:
+    cmd: python src/remove_dark_and_bright_images.py data/intermediate/remove_corrupted_images
+    deps:
+    - path: data/intermediate/remove_corrupted_images
+      md5: db86341a50c18dfe57815f2b0fcf26fe.dir
+      size: 2770263
+      nfiles: 25
+    - path: src/remove_dark_and_bright_images.py
+      md5: 581c76a28c8e62e4b26db15ed376848b
+      size: 2251
+    params:
+      params.yaml:
+        remove_dark_and_bright_images.bright_image_threshold: 200
+        remove_dark_and_bright_images.dark_image_threshold: 20
+    outs:
+    - path: data/intermediate/remove_dark_and_bright_images
+      md5: 86c58a80cf1de17566d7b21d42f8361e.dir
+      size: 2585235
+      nfiles: 20

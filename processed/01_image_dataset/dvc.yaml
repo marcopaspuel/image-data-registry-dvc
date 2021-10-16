@@ -6,3 +6,13 @@ stages:
     - src/remove_corrupted_images.py
     outs:
     - data/intermediate/remove_corrupted_images
+  remove_dark_and_bright_images:
+    cmd: python src/remove_dark_and_bright_images.py data/intermediate/remove_corrupted_images
+    deps:
+      - data/intermediate/remove_corrupted_images
+      - src/remove_dark_and_bright_images.py
+    params:
+      - remove_dark_and_bright_images.dark_image_threshold
+      - remove_dark_and_bright_images.bright_image_threshold
+    outs:
+      - data/intermediate/remove_dark_and_bright_images
