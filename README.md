@@ -49,3 +49,18 @@ To track the changes with git, run:
 git add processed/01_image_dataset/data/inputs/01_data_collection_16_oct_2021.dvc \
         processed/01_image_dataset/data/inputs/.gitignore
 ```
+
+# Create a DVC pipeline
+
+Create and run the prepare stage 
+```bash
+poetry run dvc run -n remove_corrupted_images \
+                   -d src/remove_corrupted_images.py -d data/inputs/01_data_collection_16_oct_2021 \
+                   -o data/intermediate/remove_corrupted_images \
+                   poetry run python src/remove_corrupted_images.py data/inputs/01_data_collection_16_oct_2021/
+```
+
+Track pipeline with git 
+```bash
+git add dvc.lock dvc.yaml
+```

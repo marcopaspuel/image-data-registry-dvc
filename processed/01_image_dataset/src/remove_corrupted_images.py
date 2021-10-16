@@ -7,11 +7,13 @@ from PIL import Image
 
 params = yaml.safe_load(open("params.yaml"))["remove_corrupted_images"]
 
+if len(sys.argv) != 2:
+    sys.stderr.write("Arguments error. Usage:\n")
+    sys.stderr.write("\tpython3 remove_corrupted_images.py input-data-directory\n")
+    sys.exit(1)
+
 input_dir = sys.argv[1]
 output_dir = Path("data", "intermediate", "remove_corrupted_images")
-
-print(input_dir)
-print(output_dir)
 
 
 def ensure_dir(directory):

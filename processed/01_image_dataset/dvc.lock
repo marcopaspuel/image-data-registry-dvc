@@ -1,0 +1,17 @@
+schema: '2.0'
+stages:
+  remove_corrupted_images:
+    cmd: python src/remove_corrupted_images.py data/inputs/01_data_collection_16_oct_2021/
+    deps:
+    - path: data/inputs/01_data_collection_16_oct_2021
+      md5: 440c122aaeb1aec8b17cdffbfd1f5f49.dir
+      size: 2833351
+      nfiles: 27
+    - path: src/remove_corrupted_images.py
+      md5: 23e83a518c8cb1fa841aadb2d0da2541
+      size: 1566
+    outs:
+    - path: data/intermediate/remove_corrupted_images
+      md5: db86341a50c18dfe57815f2b0fcf26fe.dir
+      size: 2770263
+      nfiles: 25
