@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "image-data-registry-dvc"
+version = "0.1.0"
+description = "Image Data Registry with DVC"
+authors = ["Marco Paspuel <marco.paspuel@outlook.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.10"
+dvc = "2.8.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
