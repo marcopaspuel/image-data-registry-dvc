@@ -1,0 +1,4 @@
+[core]
+    remote = storage
+['remote "storage"']
+    url = /Users/marco/Documents/image_data_registry_dvc_storage
