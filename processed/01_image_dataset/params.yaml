@@ -4,3 +4,7 @@ remove_corrupted_images:
 remove_dark_and_bright_images:
   dark_image_threshold: 20
   bright_image_threshold: 200
+
+classify_day_night_and_foggy_images:
+  day_night_image_threshold: 90
+  foggy_image_threshold: 20
