@@ -8,8 +8,8 @@ stages:
       size: 2833351
       nfiles: 27
     - path: src/remove_corrupted_images.py
-      md5: 49c9b354e69cdfc694507f291ea4ee50
-      size: 1600
+      md5: b97e3acdd2621a943444aedbac7d2b10
+      size: 1539
     outs:
     - path: data/intermediate/remove_corrupted_images
       md5: db86341a50c18dfe57815f2b0fcf26fe.dir

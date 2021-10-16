@@ -2,18 +2,15 @@ import shutil
 import sys
 from pathlib import Path
 
-import yaml
 from PIL import Image
-
-params = yaml.safe_load(open("params.yaml"))["remove_corrupted_images"]
 
 if len(sys.argv) != 2:
     sys.stderr.write("Arguments error. Usage:\n")
     sys.stderr.write("\tpython3 remove_corrupted_images.py input-data-directory\n")
     sys.exit(1)
 
-input_dir = sys.argv[1]
-output_dir = Path("data", "intermediate", "remove_corrupted_images")
+input_directory = sys.argv[1]
+output_directory = Path("data", "intermediate", "remove_corrupted_images")
 
 
 def ensure_dir(directory):
@@ -52,4 +49,4 @@ def remove_corrupted_images(input_dir, output_dir):
 
 
 if __name__ == '__main__':
-    remove_corrupted_images(input_dir, output_dir)
+    remove_corrupted_images(input_directory, output_directory)
