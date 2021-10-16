@@ -4,6 +4,8 @@ from pathlib import Path
 
 from PIL import Image
 
+from utils import ensure_dir
+
 if len(sys.argv) != 2:
     sys.stderr.write("Arguments error. Usage:\n")
     sys.stderr.write("\tpython3 remove_corrupted_images.py input-data-directory\n")
@@ -11,17 +13,6 @@ if len(sys.argv) != 2:
 
 input_directory = sys.argv[1]
 output_directory = Path("data", "intermediate", "remove_corrupted_images")
-
-
-def ensure_dir(directory):
-    """
-    Creates a directory if it does not exist yet.
-
-    :param directory: path to directory to be created
-    :return:
-    """
-    if not directory.is_dir():
-        directory.mkdir()
 
 
 def remove_corrupted_images(input_dir, output_dir):
@@ -41,8 +32,7 @@ def remove_corrupted_images(input_dir, output_dir):
             print(str(input_file.name) + " OK")
 
             output_file = output_dir.joinpath(input_file.name)
-            shutil.copy(input_file,
-                        output_file)
+            shutil.copy(input_file, output_file)
 
         except (IOError, SyntaxError) as e:
             print('Bad file:', input_file.name)  # Print out the names of corrupt files

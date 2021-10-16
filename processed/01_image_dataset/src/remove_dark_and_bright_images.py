@@ -7,6 +7,8 @@ import matplotlib.image as mpt_img
 import numpy as np
 import yaml
 
+from utils import ensure_dir
+
 params = yaml.safe_load(open("params.yaml"))["remove_dark_and_bright_images"]
 
 if len(sys.argv) != 2:
@@ -18,17 +20,6 @@ input_directory = sys.argv[1]
 dark_image_threshold = params["dark_image_threshold"]
 bright_image_threshold = params["bright_image_threshold"]
 output_directory = Path("data", "intermediate", "remove_dark_and_bright_images")
-
-
-def ensure_dir(directory):
-    """
-    Creates a directory if it does not exist yet.
-
-    :param directory: path to directory to be created
-    :return:
-    """
-    if not directory.is_dir():
-        directory.mkdir()
 
 
 def average_brightness(rgb_image):
