@@ -1,4 +1,5 @@
 stages:
+
   remove_corrupted_images:
     cmd: python src/remove_corrupted_images.py data/inputs
     deps:
@@ -6,6 +7,7 @@ stages:
     - src/remove_corrupted_images.py
     outs:
     - data/intermediate/remove_corrupted_images
+
   remove_dark_and_bright_images:
     cmd: python src/remove_dark_and_bright_images.py data/intermediate/remove_corrupted_images
     deps:
