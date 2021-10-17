@@ -89,3 +89,22 @@ poetry run dvc push
 ```
 
 Open a PR and merge 
+
+## How to process the new raw data
+
+First create a new branch 
+```bash
+git checkout -b add-new-raw-data-to-dataset
+```
+
+Import the new raw image data into the input folder
+```bash
+poetry run dvc import https://github.com/marcopaspuel/image-data-registry-dvc \
+                      raw/02_data_collection_20_oct_2021 \
+                      -o processed/01_image_dataset/data/inputs
+```
+
+To track the changes with git, run: 
+```bash
+git add processed/01_image_dataset/data/inputs/.gitignore processed/01_image_dataset/data/inputs/02_data_collection_20_oct_2021.dvc
+```
