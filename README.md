@@ -108,3 +108,16 @@ To track the changes with git, run:
 ```bash
 git add processed/01_image_dataset/data/inputs/.gitignore processed/01_image_dataset/data/inputs/02_data_collection_20_oct_2021.dvc
 ```
+
+Add new dataset to the list of dependencies if necessary
+
+Rerun the pipeline
+```bash
+cd 01_image_dataset
+poetry run dvc repro
+```
+
+Commit and push the results 
+
+
+Open a PR and merge 
