@@ -118,6 +118,9 @@ poetry run dvc repro
 ```
 
 Commit and push the results 
-
+```bash
+git push
+poetry run dvc push
+```
 
 Open a PR and merge 
