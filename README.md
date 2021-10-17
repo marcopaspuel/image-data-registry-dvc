@@ -87,3 +87,5 @@ Push the new dataset to the remote storage
 ```bash
 poetry run dvc push
 ```
+
+Open a PR and merge 
