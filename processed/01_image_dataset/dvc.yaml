@@ -3,7 +3,7 @@ stages:
   remove_corrupted_images:
     cmd: python src/remove_corrupted_images.py data/inputs
     deps:
-    - data/inputs/01_data_collection_16_oct_2021
+    - data/inputs
     - src/remove_corrupted_images.py
     outs:
     - data/intermediate/remove_corrupted_images

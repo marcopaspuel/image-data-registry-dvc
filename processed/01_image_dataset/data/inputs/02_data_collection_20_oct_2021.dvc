@@ -1,0 +1,12 @@
+md5: 2955594293cc192fcb5381a81ed6d32d
+frozen: true
+deps:
+- path: raw/02_data_collection_20_oct_2021
+  repo:
+    url: https://github.com/marcopaspuel/image-data-registry-dvc
+    rev_lock: f33f8310a9efd4fbf6c031db13fc303b08783812
+outs:
+- md5: 619bd407b8ab881f19fddc98ec9af8b9.dir
+  size: 368057
+  nfiles: 4
+  path: 02_data_collection_20_oct_2021

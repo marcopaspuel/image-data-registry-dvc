@@ -3,25 +3,25 @@ stages:
   remove_corrupted_images:
     cmd: python src/remove_corrupted_images.py data/inputs
     deps:
-    - path: data/inputs/01_data_collection_16_oct_2021
-      md5: 1562bef8393a9f698099fa8ea5820051.dir
-      size: 2465294
-      nfiles: 23
+    - path: data/inputs
+      md5: bea5115cd6d7098266196428bbe60ee2.dir
+      size: 2834105
+      nfiles: 30
     - path: src/remove_corrupted_images.py
       md5: 45a99fc77783fb471a49c474a9707ba8
       size: 1325
     outs:
     - path: data/intermediate/remove_corrupted_images
-      md5: 0ec0ad2a8af99bd2959f0f59b4c12f68.dir
-      size: 2402206
-      nfiles: 21
+      md5: db86341a50c18dfe57815f2b0fcf26fe.dir
+      size: 2770263
+      nfiles: 25
   remove_dark_and_bright_images:
     cmd: python src/remove_dark_and_bright_images.py data/intermediate/remove_corrupted_images
     deps:
     - path: data/intermediate/remove_corrupted_images
-      md5: 0ec0ad2a8af99bd2959f0f59b4c12f68.dir
-      size: 2402206
-      nfiles: 21
+      md5: db86341a50c18dfe57815f2b0fcf26fe.dir
+      size: 2770263
+      nfiles: 25
     - path: src/remove_dark_and_bright_images.py
       md5: 3ea115a327b093e41969a1fc5724ea15
       size: 1576
@@ -31,16 +31,16 @@ stages:
         remove_dark_and_bright_images.dark_image_threshold: 20
     outs:
     - path: data/intermediate/remove_dark_and_bright_images
-      md5: 96d4e62821f6ab7afba0cb0a7cfa4aee.dir
-      size: 2217178
-      nfiles: 16
+      md5: 86c58a80cf1de17566d7b21d42f8361e.dir
+      size: 2585235
+      nfiles: 20
   classify_day_night_and_foggy_images:
     cmd: python src/classify_day_night_and_foggy_images.py data/intermediate/remove_dark_and_bright_images
     deps:
     - path: data/intermediate/remove_dark_and_bright_images
-      md5: 96d4e62821f6ab7afba0cb0a7cfa4aee.dir
-      size: 2217178
-      nfiles: 16
+      md5: 86c58a80cf1de17566d7b21d42f8361e.dir
+      size: 2585235
+      nfiles: 20
     - path: src/classify_day_night_and_foggy_images.py
       md5: 4a57d2b9fc9048746d631bed45d95e46
       size: 3051
@@ -50,18 +50,18 @@ stages:
         classify_day_night_and_foggy_images.fog_image_threshold: 500
     outs:
     - path: data/outputs/day_images/foggy
-      md5: df8e2365b8ca2670b345f47550b945cd.dir
-      size: 113445
-      nfiles: 2
+      md5: f1e43cbf5cb2a38a93cd7a7c28e895a9.dir
+      size: 189269
+      nfiles: 3
     - path: data/outputs/day_images/sharp
-      md5: bf1a748121b653dcf03ec5ce6919c778.dir
-      size: 1642809
-      nfiles: 9
+      md5: a8a0cbb4b59db5391547dd52dcf6eb41.dir
+      size: 1828249
+      nfiles: 10
     - path: data/outputs/night_images/foggy
-      md5: d751713988987e9331980363e24189ce.dir
-      size: 0
-      nfiles: 0
+      md5: 35a82816909294ef63964147a7d5510b.dir
+      size: 9509
+      nfiles: 1
     - path: data/outputs/night_images/sharp
-      md5: 2d7aca7c84b067bb382067d2f3f30506.dir
-      size: 460924
-      nfiles: 5
+      md5: 559c0d334d4ad773d2e6ee962ebf19bb.dir
+      size: 558208
+      nfiles: 6
