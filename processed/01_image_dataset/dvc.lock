@@ -42,8 +42,8 @@ stages:
       size: 2585235
       nfiles: 20
     - path: src/classify_day_night_and_foggy_images.py
-      md5: b52d5dc165736f37c09e9a62ce6b4150
-      size: 4298
+      md5: a16902d959122dc810523c51114ff2f4
+      size: 4150
     params:
       params.yaml:
         classify_day_night_and_foggy_images.day_night_image_threshold: 100
