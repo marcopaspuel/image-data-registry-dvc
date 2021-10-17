@@ -5,10 +5,6 @@ This project contains an example of how to build a data registry for image datas
 
 ![pycharm0](assets/image-data-registry-dvc-flow-diagram.png)
 
-## Project Infrastructure
-
-![pycharm1](assets/image-data-registry-dvc-infra.png)
-
 Initialize the project with:
 ```bash
 poetry install
