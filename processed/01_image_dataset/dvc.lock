@@ -23,8 +23,8 @@ stages:
       size: 2770263
       nfiles: 25
     - path: src/remove_dark_and_bright_images.py
-      md5: cc19ced2ff978688715e6092a3a0b8f8
-      size: 2061
+      md5: 3ea115a327b093e41969a1fc5724ea15
+      size: 1576
     params:
       params.yaml:
         remove_dark_and_bright_images.bright_image_threshold: 200
@@ -42,8 +42,8 @@ stages:
       size: 2585235
       nfiles: 20
     - path: src/classify_day_night_and_foggy_images.py
-      md5: a16902d959122dc810523c51114ff2f4
-      size: 4150
+      md5: 4a57d2b9fc9048746d631bed45d95e46
+      size: 3051
     params:
       params.yaml:
         classify_day_night_and_foggy_images.day_night_image_threshold: 100

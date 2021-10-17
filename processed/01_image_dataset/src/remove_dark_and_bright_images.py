@@ -2,12 +2,10 @@ import shutil
 import sys
 from pathlib import Path
 
-import cv2
 import matplotlib.image as mpt_img
-import numpy as np
 import yaml
 
-from utils import ensure_dir
+from utils import ensure_dir, average_brightness
 
 params = yaml.safe_load(open("params.yaml"))["remove_dark_and_bright_images"]
 
@@ -20,26 +18,6 @@ input_directory = sys.argv[1]
 dark_image_threshold = params["dark_image_threshold"]
 bright_image_threshold = params["bright_image_threshold"]
 output_directory = Path("data", "intermediate", "remove_dark_and_bright_images")
-
-
-def average_brightness(rgb_image):
-    """
-    Calculates the average brightness of a given image.
-
-    :param rgb_image: input image
-    :return: average brightness value
-    """
-    # Convert image to HSV
-    hsv = cv2.cvtColor(rgb_image, cv2.COLOR_RGB2HSV)
-
-    # Add up all the pixel values in the V channel
-    sum_brightness = np.sum(hsv[:, :, 2])
-    area = rgb_image.shape[0] * rgb_image.shape[1]
-
-    # Find the avg
-    avg = sum_brightness / area
-
-    return avg
 
 
 def remove_dark_and_bright_images(input_dir, output_dir):
