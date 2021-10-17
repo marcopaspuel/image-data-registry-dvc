@@ -50,7 +50,7 @@ git add processed/01_image_dataset/data/inputs/01_data_collection_16_oct_2021.dv
         processed/01_image_dataset/data/inputs/.gitignore
 ```
 
-# Create a DVC pipeline
+## Create a DVC pipeline
 
 Create and run the prepare stage 
 ```bash
@@ -63,4 +63,27 @@ poetry run dvc run -n remove_corrupted_images \
 Track pipeline with git 
 ```bash
 git add dvc.lock dvc.yaml
+```
+
+## How to add more raw data
+First create a new branch
+```bash
+git checkout -b add-new-raw-data-collection
+```
+
+Then create a new directory in the raw data folder and add the new raw data
+
+Add new raw data collection to dvc
+```bash
+poetry run dvc add raw/02_data_collection_20_oct_2021
+```
+
+Add the dataset to git and commit 
+```bash
+git add raw/02_data_collection_20_oct_2021.dvc raw/.gitignore
+```
+
+Push the new dataset to the remote storage
+```bash
+poetry run dvc push
 ```
