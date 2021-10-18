@@ -5,7 +5,7 @@
 This project uses **DVC** to build an image data registry. The registry is divided into **raw** data and **processed** datasets.
 
 - The [raw](raw) subdirectory contains the original files that come from the data collection, and they can be images or videos.
-- The [processed](processed) subdirectory contains the source code, the pipeline and the parameters used to convert the raw data into a dataset
+- The [processed](processed) subdirectory contains source code, pipelines and parameters used to convert the raw data into a dataset
   that can be use for training.
   
 **DVC** works alongside **Git** and it helps to connect the data with the code. DVC uses Amazon S3, Microsoft Azure Blob
