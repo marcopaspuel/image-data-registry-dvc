@@ -14,9 +14,9 @@ Storage, Google Cloud Storage or disc to store large files while keeping the met
 the raw data, pipelines and processed datasets. For more information about DVC [here](https://dvc.org/).
 
 The graph bellow shows the complete model life cycle. We will use **MLflow** for model tracking and model registry. 
-The first part **Data Versioning** is covered in the [current repository](https://github.com/marcopaspuel/image-data-registry-dvc).
-The second part **Model Training** is covered in [this repository](https://github.com/marcopaspuel/awesome-ml-model).
-The third section **Model Registry** is covered in this repository.
+- The first part **Data Versioning** is covered in the [current repository](https://github.com/marcopaspuel/image-data-registry-dvc).
+- The second part **Model Training** is covered in [this repository](https://github.com/marcopaspuel/awesome-ml-model).
+- The third section **Model Registry** is covered in this repository.
 
 ![pycharm0](assets/image-data-registry-dvc-flow-diagram.png)
 
