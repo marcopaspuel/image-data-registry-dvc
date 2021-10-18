@@ -1,5 +1,4 @@
 ## Image Data Registry with DVC
-This project contains an example of how to build a data registry for image datasets using DVC.
 
 ### Introduction
 
