@@ -1,12 +1,10 @@
-## Image Data Registry with DVC
+# Image Data Registry with DVC
 
-### Table of Contents
-
-- [Image Data Registry with DVC](#image-data-registry-with-dvc)
-  * [Introduction](#introduction)
-  * [Data Versioning](#data-versioning)
+## Table of Contents
+- [Introduction](#introduction)
   * [Prerequisites](#prerequisites)
   * [Installation & Configuration](#installation---configuration)
+- [Data Versioning](#data-versioning)
   * [Add a new raw data collection](#add-a-new-raw-data-collection)
   * [Create a new processed dataset from raw data](#create-a-new-processed-dataset-from-raw-data)
   * [Create a DVC pipeline](#create-a-dvc-pipeline)
@@ -14,7 +12,7 @@
   * [How to process the new raw data](#how-to-process-the-new-raw-data)
     
 
-### Introduction
+## Introduction
 
 This project uses **DVC** to build an image data registry. The registry is divided into **raw** data and **processed** datasets.
 
@@ -33,8 +31,6 @@ Then we wil use **DVC**, **Git** and **MLflow** for model tracking. Finally we w
 - The third section **Model Registry** is covered in [this repository]().
 
 ![pycharm0](assets/image-data-registry-dvc-flow-diagram.png)
-
-### Data Versioning
 
 ### Prerequisites
 - [Poetry](https://python-poetry.org/docs/#installation) 
@@ -58,6 +54,8 @@ SSH, S3, GCS, etc. as a data store.
 ```bash
 poetry run dvc remote add -d storage /Users/marco/Documents/image_data_registry_dvc_storage
 ```
+
+## Data Versioning
 
 ### Add a new raw data collection
 
