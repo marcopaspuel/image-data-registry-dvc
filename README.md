@@ -1,9 +1,25 @@
-# Image Data Registry with DVC
+## Image Data Registry with DVC
 This project contains an example of how to build a data registry for image datasets using DVC.
 
-## Flow Diagram
+### Introduction
+
+This project uses **DVC** to build an image data registry. The registry is divided into raw data and processed datasets.
+
+- The **raw** subdirectory contains the original files that come from the data collection, and they can be images or videos.
+- The **processed** subdirectory contains the source code, the pipeline and the parameters used to convert the raw data into a dataset
+  that can be use for training.
+  
+**DVC** works alongside **Git** and it helps to connect the data with the code. DVC uses Amazon S3, Microsoft Azure Blob
+Storage, Google Cloud Storage or disc to store large files while keeping the metafiles in Git to describe and version control
+the raw data, pipelines and processed datasets. For more information about DVC [here](https://dvc.org/).
+
+The graph bellow shows the complete model life cycle. We will use **MLflow** for model tracking and model registry. 
+The first part **Data Versioning** is covered in the [current repository](https://github.com/marcopaspuel/image-data-registry-dvc).
+The second part **Model Training** is covered in [this repository](https://github.com/marcopaspuel/awesome-ml-model).
+The third section **Model Registry** is covered in this repository.
 
 ![pycharm0](assets/image-data-registry-dvc-flow-diagram.png)
+
 
 Initialize the project with:
 ```bash
