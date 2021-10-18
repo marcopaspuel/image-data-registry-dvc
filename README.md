@@ -10,12 +10,13 @@ This project uses **DVC** to build an image data registry. The registry is divid
   
 **DVC** works alongside **Git** and it helps to connect the data with the code. DVC uses Amazon S3, Microsoft Azure Blob
 Storage, Google Cloud Storage or disc to store large files while keeping the metafiles in Git to describe and version control
-the raw data, pipelines and processed datasets. For more information about DVC [here](https://dvc.org/).
+the raw data, pipelines and processed datasets. Find more information about DVC in the following [link](https://dvc.org/).
 
-The graph bellow shows the complete model life cycle. We will use **MLflow** for model tracking and model registry. 
+The graph bellow shows the complete model life cycle. We will use a **NAS**, **DVC**, and **Git** to build a data version system.
+Then we wil use **DVC**, **Git** and **MLflow** for model tracking. Finally we will use **MLflow** to build a model registry. 
 - The first part **Data Versioning** is covered in the [current repository](https://github.com/marcopaspuel/image-data-registry-dvc).
 - The second part **Model Training** is covered in [this repository](https://github.com/marcopaspuel/awesome-ml-model).
-- The third section **Model Registry** is covered in this repository.
+- The third section **Model Registry** is covered in [this repository]().
 
 ![pycharm0](assets/image-data-registry-dvc-flow-diagram.png)
 
