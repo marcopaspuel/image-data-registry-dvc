@@ -1,5 +1,19 @@
 ## Image Data Registry with DVC
 
+### Table of Contents
+
+- [Image Data Registry with DVC](#image-data-registry-with-dvc)
+  * [Introduction](#introduction)
+  * [Data Versioning](#data-versioning)
+  * [Prerequisites](#prerequisites)
+  * [Installation & Configuration](#installation---configuration)
+  * [Add a new raw data collection](#add-a-new-raw-data-collection)
+  * [Create a new processed dataset from raw data](#create-a-new-processed-dataset-from-raw-data)
+  * [Create a DVC pipeline](#create-a-dvc-pipeline)
+  * [How to add more raw data](#how-to-add-more-raw-data)
+  * [How to process the new raw data](#how-to-process-the-new-raw-data)
+    
+
 ### Introduction
 
 This project uses **DVC** to build an image data registry. The registry is divided into **raw** data and **processed** datasets.
