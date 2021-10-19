@@ -17,7 +17,6 @@ poetry run dvc import https://github.com/marcopaspuel/image-data-registry-dvc \
 
 ### Data Pipeline
 
-To initialize the project run the following command:
 ```bash
 +------------------------------------------------+                           +------------------------------------------------+  
 | data/inputs/01_data_collection_16_oct_2021.dvc |                           | data/inputs/02_data_collection_20_oct_2021.dvc |  
