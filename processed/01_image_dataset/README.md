@@ -40,6 +40,13 @@ To initialize the project run the following command:
                                             +-------------------------------------+                                              
                                             | classify_day_night_and_foggy_images |                                              
                                             +-------------------------------------+                                              
+                                                      ****            ****                                                       
+                                                ******                    ******                                                 
+                                         *******                                *******                                          
+                  +-------------------------------+                           +----------------------------------+  
+                  | data/outputs/day_images/foggy |                           | data/outputs/night_images/foggy  |  
+                  | data/outputs/day_images/sharp |                           | data/outputs/night_images/sharp  |  
+                  +-------------------------------+                           +----------------------------------+  
 
 ```
 
